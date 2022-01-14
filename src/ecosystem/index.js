@@ -18,15 +18,6 @@ const packageConfig = loadPkg.sync()
 const packageName = parsePackagejsonName(packageConfig.name).fullName
 
 export default {
-  apps: [
-    {
-      args: 'start',
-      exec_mode: 'cluster',
-      instances: 'max',
-      name: packageName,
-      script: 'npm',
-    },
-  ],
   deploy: {
     production: {
       host: ['sebastianlandwehr.com'],
