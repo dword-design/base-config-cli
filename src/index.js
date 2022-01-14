@@ -17,11 +17,8 @@ export default {
   packageConfig: {
     main: 'dist/index.js',
   },
-  prepare: async () => {
-    await baseConfigNode.prepare()
-
-    return outputFile('ecosystem.json', JSON.stringify(ecosystem, undefined, 2))
-  },
+  prepare: () =>
+    outputFile('ecosystem.json', JSON.stringify(ecosystem, undefined, 2)),
   ...(!packageConfig.private && {
     deployPlugins: [
       [
