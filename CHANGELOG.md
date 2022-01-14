@@ -1,3 +1,11 @@
+## [1.0.3](https://github.com/dword-design/base-config-cli/compare/v1.0.2...v1.0.3) (2022-01-14)
+
+
+### Bug Fixes
+
+* add @semantic-release/exec ([45db47d](https://github.com/dword-design/base-config-cli/commit/45db47d818e6b8eb652fb57062d6708f393f0cb2))
+* foo ([f8d85f4](https://github.com/dword-design/base-config-cli/commit/f8d85f4175ba3f26986e595d418e449d3977e054))
+
 ## [1.0.2](https://github.com/dword-design/base-config-cli/compare/v1.0.1...v1.0.2) (2022-01-14)
 
 
