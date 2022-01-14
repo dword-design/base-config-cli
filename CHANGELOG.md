@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/dword-design/base-config-cli/compare/v1.0.0...v1.0.1) (2022-01-14)
+
+
+### Bug Fixes
+
+* fix ([923f674](https://github.com/dword-design/base-config-cli/commit/923f674cf80e0157a9b5ae9edc1ff018310f5527))
+
 # 1.0.0 (2022-01-14)
 
 
