@@ -23,7 +23,7 @@
     "@semantic-release/exec": "^5.0.0",
     "depcheck-package-name": "^2.0.6",
     "execa": "^5",
-    "fs-extra": "^10.0.0",
+    "fs-extra": "^11.0.0",
     "hosted-git-info": "^4.1.0",
     "load-pkg": "^4.0.0",
     "parse-git-config": "^3.0.0",
