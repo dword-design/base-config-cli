@@ -33,7 +33,7 @@
   "devDependencies": {
     "@dword-design/base": "^8.6.11",
     "@dword-design/proxyquire": "^2.0.7",
-    "with-local-tmp-dir": "^4.0.11"
+    "with-local-tmp-dir": "^5.0.0"
   },
   "engines": {
     "node": ">=12"
