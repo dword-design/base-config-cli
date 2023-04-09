@@ -1,10 +1,10 @@
 import baseConfigNode from '@dword-design/base-config-node'
 import packageName from 'depcheck-package-name'
 import execa from 'execa'
-import { outputFile } from 'fs-extra'
+import fs from 'fs-extra'
 import loadPkg from 'load-pkg'
 
-import ecosystem from './ecosystem'
+import ecosystem from './ecosystem/index.js'
 
 const packageConfig = loadPkg.sync()
 
@@ -18,7 +18,7 @@ export default {
     main: 'dist/index.js',
   },
   prepare: () =>
-    outputFile('ecosystem.json', JSON.stringify(ecosystem, undefined, 2)),
+    fs.outputFile('ecosystem.json', JSON.stringify(ecosystem, undefined, 2)),
   ...(!packageConfig.private && {
     deployPlugins: [
       [
