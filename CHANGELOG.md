@@ -1,3 +1,10 @@
+## [1.0.4](https://github.com/dword-design/base-config-cli/compare/v1.0.3...v1.0.4) (2023-04-09)
+
+
+### Bug Fixes
+
+* lock file maintenance ([#26](https://github.com/dword-design/base-config-cli/issues/26)) ([8c8cc42](https://github.com/dword-design/base-config-cli/commit/8c8cc42c1b2ab804a0e1edf094e8d560103c5dd4))
+
 ## [1.0.3](https://github.com/dword-design/base-config-cli/compare/v1.0.2...v1.0.3) (2022-01-14)
 
 
