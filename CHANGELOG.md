@@ -1,3 +1,10 @@
+## [1.0.5](https://github.com/dword-design/base-config-cli/compare/v1.0.4...v1.0.5) (2023-04-10)
+
+
+### Bug Fixes
+
+* update dependency with-local-tmp-dir to v5.0.1 ([43e217d](https://github.com/dword-design/base-config-cli/commit/43e217d36e46302b3772c0e16825c54bd15ea196))
+
 ## [1.0.4](https://github.com/dword-design/base-config-cli/compare/v1.0.3...v1.0.4) (2023-04-09)
 
 
