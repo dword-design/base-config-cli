@@ -1322,9 +1322,9 @@
     micromatch "^4.0.2"
 
 "@dword-design/base-config-node@^1.9.30":
-  version "1.11.9"
-  resolved "https://registry.yarnpkg.com/@dword-design/base-config-node/-/base-config-node-1.11.9.tgz#41f88e51e00096c7fac65a1e75679705cbea5683"
-  integrity sha512-epDaJvqL4f89PVt8bETivkltC26XOvXMwsiky1Z6MJqJNtbc2oImu30t7iQHaM/jR6yIGwFwKFEd43bVeAvI0g==
+  version "1.11.10"
+  resolved "https://registry.yarnpkg.com/@dword-design/base-config-node/-/base-config-node-1.11.10.tgz#ffc4648ddbb4f0d0699436c66e908e6be28b262d"
+  integrity sha512-p87fmBpXuUqsI3ZGeUFOJY7Urt3ifcP3g6bLsrjiRUt2wK6nb36Js5dL0ZqsEOv7kbO6+bVeYIzQLowyNx+lmA==
   dependencies:
     "@babel/cli" "^7.7.5"
     "@babel/core" "^7.7.5"
