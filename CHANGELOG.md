@@ -1,3 +1,10 @@
+## [1.0.11](https://github.com/dword-design/base-config-cli/compare/v1.0.10...v1.0.11) (2023-04-29)
+
+
+### Bug Fixes
+
+* update dependency @dword-design/base-config-node to v1.11.10 ([aa04216](https://github.com/dword-design/base-config-cli/commit/aa04216675c21ca7fc5550cbde739cbc10594ef4))
+
 ## [1.0.10](https://github.com/dword-design/base-config-cli/compare/v1.0.9...v1.0.10) (2023-04-29)
 
 
