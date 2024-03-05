@@ -1252,7 +1252,7 @@
     load-pkg "npm:@dword-design/load-pkg"
     param-case "^3.0.3"
 
-"@dword-design/base-config-node@^1.6.0", "@dword-design/base-config-node@^1.9.30":
+"@dword-design/base-config-node@^1.6.0":
   version "1.11.14"
   resolved "https://registry.yarnpkg.com/@dword-design/base-config-node/-/base-config-node-1.11.14.tgz#bb26416230cef395106c383519822e69a46e23d8"
   integrity sha512-+3O8Ngz5gZJ/KlKYtQbBzIq86K44AFHk9Ls++k1GkAzevB1Te/oAdVSYjfdlTWv4/c+kF2hnep/feW5FvBi9gg==
@@ -1266,6 +1266,23 @@
     delete-empty "^3.0.0"
     eslint "^8.28.0"
     execa "^7.0.0"
+    fs-extra "^11.0.0"
+    micromatch "^4.0.2"
+
+"@dword-design/base-config-node@^3.0.0":
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/@dword-design/base-config-node/-/base-config-node-3.0.0.tgz#cf88753368b3c42a31aa62d20b5b1f69507aec66"
+  integrity sha512-xFAj86B+KzUZfK2ETpiTfG+tO0EJvZSYhBdzcnTmrPj6RXRtDpR0svhQ5u+9piuGjr6ffK+vuHsAOzlZnNvM1w==
+  dependencies:
+    "@babel/cli" "^7.7.5"
+    "@babel/core" "^7.7.5"
+    "@dword-design/depcheck-parser-sass" "^4.0.0"
+    "@dword-design/functions" "^6.0.0"
+    chokidar "^3.4.0"
+    debounce "^2.0.0"
+    delete-empty "^3.0.0"
+    eslint "^8.28.0"
+    execa "^8.0.1"
     fs-extra "^11.0.0"
     micromatch "^4.0.2"
 
@@ -1364,6 +1381,16 @@
     node-sass-package-importer "^5.3.2"
     require-package-name "^2.0.1"
 
+"@dword-design/depcheck-parser-sass@^4.0.0":
+  version "4.0.4"
+  resolved "https://registry.yarnpkg.com/@dword-design/depcheck-parser-sass/-/depcheck-parser-sass-4.0.4.tgz#e94f1ffc593ded878e6877ed1251c6ed5d2e5328"
+  integrity sha512-liMT6tgQ/YfhNgW6rigOaY0XqfNMMFb+DCwEeLtfBdTJhMUEHwBb8UsChw8uwrxMSQW/YsabfnDsT897pBmBlg==
+  dependencies:
+    "@dword-design/functions" "^5.0.0"
+    enhanced-resolve "^5.14.1"
+    get-package-name "^2.0.0"
+    sass "~1.62"
+
 "@dword-design/endent@^1.0.0":
   version "1.4.1"
   resolved "https://registry.yarnpkg.com/@dword-design/endent/-/endent-1.4.1.tgz#b1b38b87048ff43b17060e075c44896ebd414ecd"
@@ -1423,6 +1450,16 @@
     lodash "^4.17.15"
     tinycolor2 "^1.4.1"
 
+"@dword-design/functions@^5.0.0":
+  version "5.0.27"
+  resolved "https://registry.yarnpkg.com/@dword-design/functions/-/functions-5.0.27.tgz#a609129207ec37abc0fae6aee26872166e409fc6"
+  integrity sha512-16A97RKtn21xLWI7Y7VhFz4WCWui+TLit/J5/l77BDpWmPi2LzgjQzDbafDDw7OUeY6GEAi/M4jdbuQhsIbSEg==
+  dependencies:
+    "@dword-design/endent" "^1.0.0"
+    delay "^5.0.0"
+    lodash "^4.17.15"
+    tinycolor2 "^1.4.1"
+
 "@dword-design/functions@^5.0.12":
   version "5.0.24"
   resolved "https://registry.yarnpkg.com/@dword-design/functions/-/functions-5.0.24.tgz#9395a3c065c6deadaeebf9519b3b4b245bfa2c7b"
@@ -1430,6 +1467,16 @@
   dependencies:
     "@dword-design/endent" "^1.0.0"
     delay "^5.0.0"
+    lodash "^4.17.15"
+    tinycolor2 "^1.4.1"
+
+"@dword-design/functions@^6.0.0":
+  version "6.0.0"
+  resolved "https://registry.yarnpkg.com/@dword-design/functions/-/functions-6.0.0.tgz#e2bdbf4b813f4dad9fb17596314d6e7b8a039723"
+  integrity sha512-22X9eviXAbaz8xdYrp5Tj6KjDPiT+m3fppAP+wEqA3gecAlCyExABesA1bEZ57aXrXrbhNk88M8PvdAO/PLg3A==
+  dependencies:
+    "@dword-design/endent" "^1.0.0"
+    delay "^6.0.0"
     lodash "^4.17.15"
     tinycolor2 "^1.4.1"
 
@@ -4111,6 +4158,11 @@ debounce@^1.2.0:
   resolved "https://registry.yarnpkg.com/debounce/-/debounce-1.2.1.tgz#38881d8f4166a5c5848020c11827b834bcb3e0a5"
   integrity sha512-XRRe6Glud4rd/ZGQfiV1ruXSfbvfJedlV9Y6zOlP+2K04vBYiJEte6stfFkCP03aMnY5tsipamumUjL14fofug==
 
+debounce@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/debounce/-/debounce-2.0.0.tgz#b2f914518a1481466f4edaee0b063e4d473ad549"
+  integrity sha512-xRetU6gL1VJbs85Mc4FoEGSjQxzpdxRyFhe3lmWFyy2EzydIcD4xzUvRJMD+NPDfMwKNhxa3PvsIOU32luIWeA==
+
 debug@4, debug@4.3.4, debug@^4.0.0, debug@^4.1.0, debug@^4.1.1, debug@^4.2.0, debug@^4.3.1, debug@^4.3.2, debug@^4.3.3, debug@^4.3.4, debug@~4.3.1:
   version "4.3.4"
   resolved "https://registry.yarnpkg.com/debug/-/debug-4.3.4.tgz#1319f6579357f2338d3337d2cdd4914bb5dcc865"
@@ -4266,6 +4318,11 @@ delay@^5.0.0:
   version "5.0.0"
   resolved "https://registry.yarnpkg.com/delay/-/delay-5.0.0.tgz#137045ef1b96e5071060dd5be60bf9334436bd1d"
   integrity sha512-ReEBKkIfe4ya47wlPYf/gu5ib6yUG0/Aez0JQZQz94kiWtRQvZIQbTiehsnwHvLSWJnQdhVeqYue7Id1dKr0qw==
+
+delay@^6.0.0:
+  version "6.0.0"
+  resolved "https://registry.yarnpkg.com/delay/-/delay-6.0.0.tgz#43749aefdf6cabd9e17b0d00bd3904525137e607"
+  integrity sha512-2NJozoOHQ4NuZuVIr5CWd0iiLVIRSDepakaovIN+9eIDHEhdCAEvSy2cuf1DCrPPQLvHmbqTHODlhHg8UCy4zw==
 
 delegates@^1.0.0:
   version "1.0.0"
@@ -4528,6 +4585,14 @@ end-of-stream@^1.1.0:
   integrity sha512-+uw1inIHVPQoaVuHzRyXd21icM+cnt4CzD5rW+NC1wjOUSTOs+Te7FOv7AhN7vS9x/oIyhLP5PR1H+phQAHu5Q==
   dependencies:
     once "^1.4.0"
+
+enhanced-resolve@^5.14.1:
+  version "5.15.1"
+  resolved "https://registry.yarnpkg.com/enhanced-resolve/-/enhanced-resolve-5.15.1.tgz#384391e025f099e67b4b00bfd7f0906a408214e1"
+  integrity sha512-3d3JRbwsCLJsYgvb6NuWEG44jjPSOMuS73L/6+7BZuoKm3W+qXnSoIYVHi8dG7Qcg4inAY4jbzkZ7MnskePeDg==
+  dependencies:
+    graceful-fs "^4.2.4"
+    tapable "^2.2.0"
 
 enquirer@2.3.6:
   version "2.3.6"
@@ -5230,6 +5295,21 @@ execa@^7.0.0, execa@^7.1.1:
     signal-exit "^3.0.7"
     strip-final-newline "^3.0.0"
 
+execa@^8.0.1:
+  version "8.0.1"
+  resolved "https://registry.yarnpkg.com/execa/-/execa-8.0.1.tgz#51f6a5943b580f963c3ca9c6321796db8cc39b8c"
+  integrity sha512-VyhnebXciFV2DESc+p6B+y0LjSm0krU4OgJN44qFAhBY0TJ+1V61tYD2+wHusZ6F9n5K+vl8k0sTy7PEfV4qpg==
+  dependencies:
+    cross-spawn "^7.0.3"
+    get-stream "^8.0.1"
+    human-signals "^5.0.0"
+    is-stream "^3.0.0"
+    merge-stream "^2.0.0"
+    npm-run-path "^5.1.0"
+    onetime "^6.0.0"
+    signal-exit "^4.1.0"
+    strip-final-newline "^3.0.0"
+
 expand-brackets@^0.1.4:
   version "0.1.5"
   resolved "https://registry.yarnpkg.com/expand-brackets/-/expand-brackets-0.1.5.tgz#df07284e342a807cd733ac5af72411e581d1177b"
@@ -5905,6 +5985,11 @@ get-stream@^6.0.0, get-stream@^6.0.1:
   resolved "https://registry.yarnpkg.com/get-stream/-/get-stream-6.0.1.tgz#a262d8eef67aced57c2852ad6167526a43cbf7b7"
   integrity sha512-ts6Wi+2j3jQjqi70w5AlN8DFnkSwC+MqmxEzdEALB2qXZYV3X/b1CTfgPLGJNMeAWxdPfU8FO1ms3NUfaHCPYg==
 
+get-stream@^8.0.1:
+  version "8.0.1"
+  resolved "https://registry.yarnpkg.com/get-stream/-/get-stream-8.0.1.tgz#def9dfd71742cd7754a7761ed43749a27d02eca2"
+  integrity sha512-VaUJspBffn/LMCJVoMvSAdmscJyS1auj5Zulnn5UoYcY531UWmdwhRWkcGKnGU93m5HSXP9LP2usOryrBtQowA==
+
 get-symbol-description@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/get-symbol-description/-/get-symbol-description-1.0.0.tgz#7fdb81c900101fbd564dd5f1a30af5aadc1e58d6"
@@ -6431,6 +6516,11 @@ human-signals@^4.3.0:
   version "4.3.1"
   resolved "https://registry.yarnpkg.com/human-signals/-/human-signals-4.3.1.tgz#ab7f811e851fca97ffbd2c1fe9a958964de321b2"
   integrity sha512-nZXjEF2nbo7lIw3mgYjItAfgQXog3OjJogSbKa2CQIIvSGWcKgeJnQlNXip6NglNzYH45nSRiEVimMvYL8DDqQ==
+
+human-signals@^5.0.0:
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/human-signals/-/human-signals-5.0.0.tgz#42665a284f9ae0dade3ba41ebc37eb4b852f3a28"
+  integrity sha512-AXcZb6vzzrFAUE61HnN4mpLqd/cSIwNQjtNWR0euPm6y0iqx3G4gOXaIDdtdDwZmhwe82LA6+zinmW4UBWVePQ==
 
 humanize-ms@^1.2.1:
   version "1.2.1"
@@ -10765,6 +10855,15 @@ sass@^1.29.0:
     immutable "^4.0.0"
     source-map-js ">=0.6.2 <2.0.0"
 
+sass@~1.62:
+  version "1.62.1"
+  resolved "https://registry.yarnpkg.com/sass/-/sass-1.62.1.tgz#caa8d6bf098935bc92fc73fa169fb3790cacd029"
+  integrity sha512-NHpxIzN29MXvWiuswfc1W3I0N8SXBd8UR26WntmDlRYf0bSADnwnOjsyMZ3lMezSlArD33Vs3YFhp7dWvL770A==
+  dependencies:
+    chokidar ">=3.0.0 <4.0.0"
+    immutable "^4.0.0"
+    source-map-js ">=0.6.2 <2.0.0"
+
 sax@^1.2.4:
   version "1.2.4"
   resolved "https://registry.yarnpkg.com/sax/-/sax-1.2.4.tgz#2816234e2378bddc4e5354fab5caa895df7100d9"
@@ -10953,6 +11052,11 @@ signal-exit@^4.0.1:
   version "4.0.2"
   resolved "https://registry.yarnpkg.com/signal-exit/-/signal-exit-4.0.2.tgz#ff55bb1d9ff2114c13b400688fa544ac63c36967"
   integrity sha512-MY2/qGx4enyjprQnFaZsHib3Yadh3IXyV2C321GY0pjGfVBu4un0uDJkwgdxqO+Rdx8JMT8IfJIRwbYVz3Ob3Q==
+
+signal-exit@^4.1.0:
+  version "4.1.0"
+  resolved "https://registry.yarnpkg.com/signal-exit/-/signal-exit-4.1.0.tgz#952188c1cbd546070e2dd20d0f41c0ae0530cb04"
+  integrity sha512-bzyZ1e88w9O1iNJbKnOlvYTrWPDl46O1bG0D3XInv+9tkPrxrN8jUUTiFlDkkmKWgn1M6CfIA13SuGqOa9Korw==
 
 signale@^1.2.1:
   version "1.4.0"
@@ -11508,6 +11612,11 @@ tagged-template-noop@^2.1.1:
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/tagged-template-noop/-/tagged-template-noop-2.1.1.tgz#0d215fd9eec557290f41838a22116a8d4ce606dd"
   integrity sha512-diZ004cBHKVueqSr5p+/EPZhofCBRW7w7zZL71FcK8x+209BbMw77ICrP9AWXpVjPyyyIqRYYFAM4Wjk2HNWQg==
+
+tapable@^2.2.0:
+  version "2.2.1"
+  resolved "https://registry.yarnpkg.com/tapable/-/tapable-2.2.1.tgz#1967a73ef4060a82f12ab96af86d52fdb76eeca0"
+  integrity sha512-GNzQvQTOIP6RyTfE2Qxb8ZVlNmw0n88vp1szwWRimP02mnTsx3Wtn5qRdqY9w2XduFNUgvOwhNnQsjwCp+kqaQ==
 
 tar@*, tar@^6.0.2, tar@^6.1.11, tar@^6.1.13, tar@^6.1.2:
   version "6.1.15"
