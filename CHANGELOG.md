@@ -1,3 +1,10 @@
+## [2.0.1](https://github.com/dword-design/base-config-cli/compare/v2.0.0...v2.0.1) (2024-03-15)
+
+
+### Bug Fixes
+
+* fix config ([8c78aa5](https://github.com/dword-design/base-config-cli/commit/8c78aa55b3ad22fe914641170f3368da76c699b1))
+
 # [2.0.0](https://github.com/dword-design/base-config-cli/compare/v1.0.11...v2.0.0) (2024-03-15)
 
 
