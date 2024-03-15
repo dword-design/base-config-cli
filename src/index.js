@@ -10,6 +10,7 @@ const packageConfig = loadPkg.sync()
 
 export default config => {
   const nodeConfig = baseConfigNode(config)
+
   return {
     ...nodeConfig,
     allowedMatches: [...nodeConfig.allowedMatches, 'ecosystem.json'],
@@ -46,6 +47,6 @@ export default config => {
         handler: () =>
           execa.command('pm2 deploy production setup', { stdio: 'inherit' }),
       },
-    }
+    },
   }
 }
