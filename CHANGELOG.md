@@ -1,3 +1,15 @@
+# [2.0.0](https://github.com/dword-design/base-config-cli/compare/v1.0.11...v2.0.0) (2024-03-15)
+
+
+### Bug Fixes
+
+* lock file maintenance ([#61](https://github.com/dword-design/base-config-cli/issues/61)) ([20f3ceb](https://github.com/dword-design/base-config-cli/commit/20f3cebcabbeb44d8ae643bc51542806fe1d2851))
+
+
+### BREAKING CHANGES
+
+* node.js >= 18
+
 ## [1.0.11](https://github.com/dword-design/base-config-cli/compare/v1.0.10...v1.0.11) (2023-04-29)
 
 
