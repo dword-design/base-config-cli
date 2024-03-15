@@ -8,8 +8,8 @@ import ecosystem from './ecosystem/index.js'
 
 const packageConfig = loadPkg.sync()
 
-export default {
-  ...baseConfigNode,
+export default config => ({
+  ...baseConfigNode(config),
   allowedMatches: [...baseConfigNode.allowedMatches, 'ecosystem.json'],
   editorIgnore: [...baseConfigNode.editorIgnore, 'ecosystem.json'],
   isLockFileFixCommitType: true,
@@ -45,4 +45,4 @@ export default {
         execa.command('pm2 deploy production setup', { stdio: 'inherit' }),
     },
   },
-}
+})
