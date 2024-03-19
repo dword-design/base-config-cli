@@ -1,3 +1,11 @@
+## [2.0.3](https://github.com/dword-design/base-config-cli/compare/v2.0.2...v2.0.3) (2024-03-19)
+
+
+### Bug Fixes
+
+* fix ecosystem ([4916645](https://github.com/dword-design/base-config-cli/commit/4916645982d0c915cbf32db7615e1d6abed53e71))
+* foo ([1d8d01b](https://github.com/dword-design/base-config-cli/commit/1d8d01b20a358d8c87532c571cd01548d899b70d))
+
 ## [2.0.2](https://github.com/dword-design/base-config-cli/compare/v2.0.1...v2.0.2) (2024-03-19)
 
 
