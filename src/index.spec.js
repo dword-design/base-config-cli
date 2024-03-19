@@ -10,6 +10,11 @@ export default {
   async beforeEach() {
     this.resetWithLocalTmpDir = await withLocalTmpDir()
   },
+  private: async () => {
+    await fs.outputFile('package.json', JSON.stringify({ private: true }))
+    await new Base({ name: '../src/index.js' }).prepare()
+    expect(await fs.exists('ecosystem.json')).toBe(false)
+  },
   async works() {
     await execaCommand('git init')
     await execaCommand(

@@ -18,11 +18,6 @@ export default config => {
     packageConfig: {
       main: 'dist/index.js',
     },
-    prepare: () =>
-      fs.outputFile(
-        'ecosystem.json',
-        JSON.stringify(getEcosystemConfig(), undefined, 2),
-      ),
     ...(!packageConfig.private && {
       deployPlugins: [
         [
@@ -41,6 +36,11 @@ export default config => {
         },
         { run: 'ssh-keyscan sebastianlandwehr.com >> ~/.ssh/known_hosts' },
       ],
+      prepare: () =>
+        fs.outputFile(
+          'ecosystem.json',
+          JSON.stringify(getEcosystemConfig(), undefined, 2),
+        ),
     }),
     commands: {
       setupDeploy: {
