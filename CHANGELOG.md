@@ -1,3 +1,10 @@
+## [2.0.2](https://github.com/dword-design/base-config-cli/compare/v2.0.1...v2.0.2) (2024-03-19)
+
+
+### Bug Fixes
+
+* update dependency execa to v8 ([#63](https://github.com/dword-design/base-config-cli/issues/63)) ([2b80b61](https://github.com/dword-design/base-config-cli/commit/2b80b6191acc19cae1325c128c0e451f1c79a82a))
+
 ## [2.0.1](https://github.com/dword-design/base-config-cli/compare/v2.0.0...v2.0.1) (2024-03-15)
 
 
