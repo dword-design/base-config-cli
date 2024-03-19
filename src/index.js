@@ -1,27 +1,28 @@
 import baseConfigNode from '@dword-design/base-config-node'
+import deepmerge from 'deepmerge'
 import packageName from 'depcheck-package-name'
 import execa from 'execa'
 import fs from 'fs-extra'
 import loadPkg from 'load-pkg'
 
-import ecosystem from './ecosystem/index.js'
-
-const packageConfig = loadPkg.sync()
+import getEcosystemConfig from './get-ecosystem-config/index.js'
 
 export default config => {
-  const nodeConfig = baseConfigNode(config)
+  const packageConfig = loadPkg.sync()
 
-  return {
-    ...nodeConfig,
-    allowedMatches: [...nodeConfig.allowedMatches, 'ecosystem.json'],
-    editorIgnore: [...nodeConfig.editorIgnore, 'ecosystem.json'],
+  return deepmerge(baseConfigNode(config), {
+    allowedMatches: ['ecosystem.json'],
+    editorIgnore: ['ecosystem.json'],
     isLockFileFixCommitType: true,
     npmPublish: false,
     packageConfig: {
       main: 'dist/index.js',
     },
     prepare: () =>
-      fs.outputFile('ecosystem.json', JSON.stringify(ecosystem, undefined, 2)),
+      fs.outputFile(
+        'ecosystem.json',
+        JSON.stringify(getEcosystemConfig(), undefined, 2),
+      ),
     ...(!packageConfig.private && {
       deployPlugins: [
         [
@@ -42,11 +43,10 @@ export default config => {
       ],
     }),
     commands: {
-      ...nodeConfig.commands,
       setupDeploy: {
         handler: () =>
           execa.command('pm2 deploy production setup', { stdio: 'inherit' }),
       },
     },
-  }
+  })
 }
