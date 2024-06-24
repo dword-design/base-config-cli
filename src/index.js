@@ -1,15 +1,14 @@
-import baseConfigNode from '@dword-design/base-config-node'
-import deepmerge from 'deepmerge'
-import packageName from 'depcheck-package-name'
-import execa from 'execa'
-import fs from 'fs-extra'
-import loadPkg from 'load-pkg'
+import baseConfigNode from '@dword-design/base-config-node';
+import deepmerge from 'deepmerge';
+import packageName from 'depcheck-package-name';
+import execa from 'execa';
+import fs from 'fs-extra';
+import loadPkg from 'load-pkg';
 
-import getEcosystemConfig from './get-ecosystem-config/index.js'
+import getEcosystemConfig from './get-ecosystem-config/index.js';
 
 export default config => {
-  const packageConfig = loadPkg.sync()
-
+  const packageConfig = loadPkg.sync();
   return deepmerge(baseConfigNode(config), {
     allowedMatches: ['ecosystem.json'],
     editorIgnore: ['ecosystem.json'],
@@ -48,5 +47,5 @@ export default config => {
           execa.command('pm2 deploy production setup', { stdio: 'inherit' }),
       },
     },
-  })
-}
+  });
+};
