@@ -22,7 +22,7 @@
     "test": "base test"
   },
   "dependencies": {
-    "@dword-design/base-config-node": "^3.0.0",
+    "@dword-design/base-config-node": "^4.0.0",
     "@semantic-release/exec": "^6.0.3",
     "deepmerge": "^4.3.1",
     "depcheck-package-name": "^3.0.0",
