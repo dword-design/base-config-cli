@@ -1,0 +1,14 @@
+{
+  "deploy": {
+    "production": {
+      "host": [
+        "sebastianlandwehr.com"
+      ],
+      "path": "/var/www/foo",
+      "post-deploy": "source ~/.nvm/nvm.sh && pnpm install --frozen-lockfile && pnpm prepublishOnly",
+      "ref": "origin/master",
+      "repo": "git@github.com:dword-design/foo.git",
+      "user": "root"
+    }
+  }
+}
