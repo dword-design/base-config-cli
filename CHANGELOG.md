@@ -1,3 +1,16 @@
+# [3.0.0](https://github.com/dword-design/base-config-cli/compare/v2.0.3...v3.0.0) (2025-07-21)
+
+
+### Bug Fixes
+
+* lock file maintenance ([#85](https://github.com/dword-design/base-config-cli/issues/85)) ([82e9370](https://github.com/dword-design/base-config-cli/commit/82e93709b2d41a0025d0b30b4119d825fe9c1030))
+
+
+### BREAKING CHANGES
+
+* node.js >= 20
+* drop TEST_ prefix for env variables
+
 ## [2.0.3](https://github.com/dword-design/base-config-cli/compare/v2.0.2...v2.0.3) (2024-03-19)
 
 
