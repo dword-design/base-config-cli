@@ -22,13 +22,13 @@ export default (packageConfig, { cwd = '.' } = {}) => {
       production: {
         host: ['sebastianlandwehr.com'],
         path: `/var/www/${packageName}`,
-        user: 'root',
-        ...(repositoryUrl && {
-          repo: `git@github.com:${gitInfo.user}/${gitInfo.project}.git`,
-        }),
         'post-deploy':
           'source ~/.nvm/nvm.sh && pnpm install --frozen-lockfile && pnpm prepublishOnly',
         ref: 'origin/master',
+        ...(repositoryUrl && {
+          repo: `git@github.com:${gitInfo.user}/${gitInfo.project}.git`,
+        }),
+        user: 'root',
       },
     },
   };
