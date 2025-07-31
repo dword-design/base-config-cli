@@ -1,3 +1,10 @@
+## [3.0.1](https://github.com/dword-design/base-config-cli/compare/v3.0.0...v3.0.1) (2025-07-31)
+
+
+### Bug Fixes
+
+* fix ecosystem order ([59aa0c3](https://github.com/dword-design/base-config-cli/commit/59aa0c31383016370739f199d7caecc3908bf6f1))
+
 # [3.0.0](https://github.com/dword-design/base-config-cli/compare/v2.0.3...v3.0.0) (2025-07-21)
 
 
