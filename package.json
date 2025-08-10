@@ -38,7 +38,7 @@
     "depcheck-package-name": "^4.0.0",
     "execa": "^9.6.0",
     "fs-extra": "^11.1.1",
-    "hosted-git-info": "^8.1.0",
+    "hosted-git-info": "^9.0.0",
     "load-pkg": "^4.0.0",
     "parse-git-config": "npm:@dword-design/parse-git-config@^0.0.1",
     "parse-packagejson-name": "^1.0.1",
