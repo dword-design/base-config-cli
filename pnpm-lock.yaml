@@ -49,8 +49,8 @@ importers:
         specifier: ^1.54.1
         version: 1.54.1
       playwright-expect-snapshot:
-        specifier: ^1.0.0
-        version: 1.0.0(@playwright/test@1.54.1)
+        specifier: ^2.0.0
+        version: 2.0.0(@playwright/test@1.54.1)
 
 packages:
 
@@ -246,6 +246,7 @@ packages:
   '@dword-design/defu@1.0.3':
     resolution: {integrity: sha512-QEM8a6CPIrMvudnuNDwr3IxWJ0dcMKG9tgxt3zuPk/NmXV0ejk4qxQJ1PfquJwRzu59UsqNpUAACMG485VMIUA==}
     engines: {node: '>=18'}
+    deprecated: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.
 
   '@dword-design/depcheck-parser-sass@4.0.4':
     resolution: {integrity: sha512-liMT6tgQ/YfhNgW6rigOaY0XqfNMMFb+DCwEeLtfBdTJhMUEHwBb8UsChw8uwrxMSQW/YsabfnDsT897pBmBlg==}
@@ -3409,9 +3410,9 @@ packages:
     engines: {node: '>=18'}
     hasBin: true
 
-  playwright-expect-snapshot@1.0.0:
-    resolution: {integrity: sha512-OV0tecTq1jsOaLXItlAkzEzIjO+k8MnSvE6TveCRuyWYxCsTk2ijhvB1ZyzRL4Qiv8aTwfl5OwwHwa5G3rIC6Q==}
-    engines: {node: '>=20'}
+  playwright-expect-snapshot@2.0.0:
+    resolution: {integrity: sha512-2SRGxkuUAQuQDkbGYVvTprErcUdM0d5OfKIIe9epYns3GCCvf0/799jc4mQTPdzVPGyOvkRd2rGAPjri+KuMwQ==}
+    engines: {node: '>=22'}
     peerDependencies:
       '@playwright/test': ^1
 
@@ -3931,6 +3932,10 @@ packages:
   sort-keys@5.1.0:
     resolution: {integrity: sha512-aSbHV0DaBcr7u0PVHXzM6NbZNAtrr9sF6+Qfs9UUVG7Ll3jQ6hHi8F/xqIIcn2rvIVbr0v/2zyjSdwSV47AgLQ==}
     engines: {node: '>=12'}
+
+  sort-keys@6.0.0:
+    resolution: {integrity: sha512-ueSlHJMwpIw42CJ4B11Uxzh/S0p0AlOyiNktlv2KOu5e1JpUE6DlC4AAUjXqesHdBRv/g0wC9Q4vwq0NP2pA9w==}
+    engines: {node: '>=20'}
 
   sort-object-keys@1.1.3:
     resolution: {integrity: sha512-855pvK+VkU7PaKYPc+Jjnmt4EzejQHyhhF33q31qG8x7maDzkeFhAAThdCYay11CISO+qAMwjOBP+fPZe0IPyg==}
@@ -8026,10 +8031,10 @@ snapshots:
 
   playwright-core@1.54.1: {}
 
-  playwright-expect-snapshot@1.0.0(@playwright/test@1.54.1):
+  playwright-expect-snapshot@2.0.0(@playwright/test@1.54.1):
     dependencies:
       '@playwright/test': 1.54.1
-      sort-keys: 5.1.0
+      sort-keys: 6.0.0
 
   playwright@1.54.1:
     dependencies:
@@ -8600,6 +8605,10 @@ snapshots:
       smart-buffer: 4.2.0
 
   sort-keys@5.1.0:
+    dependencies:
+      is-plain-obj: 4.1.0
+
+  sort-keys@6.0.0:
     dependencies:
       is-plain-obj: 4.1.0
 
