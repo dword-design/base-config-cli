@@ -5,14 +5,14 @@ import hostedGitInfo from 'hosted-git-info';
 import parseGitConfig from 'parse-git-config';
 import parsePackagejsonName from 'parse-packagejson-name';
 
-export default (packageConfig, { cwd = '.' } = {}) => {
+export default (packageConfig: { name: string }, { cwd = '.' } = {}) => {
   const repositoryUrl = fs.existsSync(pathLib.join(cwd, '.git'))
     ? parseGitConfig.sync({ cwd })['remote "origin"']?.url
     : undefined;
 
-  const gitInfo = hostedGitInfo.fromUrl(repositoryUrl) || {};
+  const gitInfo = hostedGitInfo.fromUrl(repositoryUrl);
 
-  if (repositoryUrl !== undefined && gitInfo.type !== 'github') {
+  if (repositoryUrl !== undefined && gitInfo?.type !== 'github') {
     throw new Error('Only GitHub repositories are supported.');
   }
 
@@ -25,7 +25,7 @@ export default (packageConfig, { cwd = '.' } = {}) => {
         'post-deploy':
           'source ~/.nvm/nvm.sh && pnpm install --frozen-lockfile && pnpm prepublishOnly',
         ref: 'origin/master',
-        ...(repositoryUrl && {
+        ...(gitInfo && {
           repo: `git@github.com:${gitInfo.user}/${gitInfo.project}.git`,
         }),
         user: 'root',

@@ -1,19 +1,19 @@
 import pathLib from 'node:path';
 
-import type { Base, Config } from '@dword-design/base';
+import type { Base } from '@dword-design/base';
 import { defineBaseConfig } from '@dword-design/base';
 import baseConfigNode from '@dword-design/base-config-node';
 import deepmerge from 'deepmerge';
 import packageName from 'depcheck-package-name';
 import { execaCommand } from 'execa';
 import fs from 'fs-extra';
-import loadPkg from 'load-pkg';
+import { readPackageSync } from 'read-pkg';
 
 import getEcosystemConfig from './get-ecosystem-config';
 
-export default defineBaseConfig(function (this: Base, config: Config) {
-  const packageConfig = loadPkg.sync(this.cwd);
-  return deepmerge(baseConfigNode.call(this, config), {
+export default defineBaseConfig(function (this: Base) {
+  const packageConfig = readPackageSync({ cwd: this.cwd });
+  return deepmerge(baseConfigNode.call(this), {
     allowedMatches: ['ecosystem.json'],
     editorIgnore: ['ecosystem.json'],
     isLockFileFixCommitType: true,
