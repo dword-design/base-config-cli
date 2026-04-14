@@ -20,9 +20,9 @@ export default defineBaseConfig(function (this: Base) {
   return {
     allowedMatches: [
       'src',
-      packageConfig.private
+      ...(packageConfig.private
         ? []
-        : ['ecosystem.json', 'playbook.yml', 'requirements.yml'],
+        : ['ecosystem.json', 'playbook.yml', 'requirements.yml']),
     ],
     gitignore: ['/.output'],
     isLockFileFixCommitType: true,
