@@ -1,9 +1,8 @@
 import pathLib from 'node:path';
 
 import type { Base, PartialCommandOptions } from '@dword-design/base';
-import { nodeFileTrace } from '@vercel/nft';
 import { execaCommand } from 'execa';
-import fs from 'fs-extra';
+import { traceNodeModules } from 'nf3';
 
 import resolveAliases from './resolve-aliases';
 
@@ -29,20 +28,12 @@ export default async function (
   await resolveAliases({ cwd: this.cwd });
   const outDir = pathLib.resolve(this.cwd, '.output');
   const entry = pathLib.resolve(outDir, 'cli.mjs');
-  const { fileList } = await nodeFileTrace([entry], { base: this.cwd });
-  fileList.delete(pathLib.join('.output', 'cli.mjs'));
-  fileList.delete('package.json');
 
-  for (const file of fileList) {
-    const src = pathLib.resolve(this.cwd, file);
-    const dest = pathLib.resolve(outDir, file);
-    await fs.copy(src, dest);
-  }
-
-  await fs.writeFile(
-    pathLib.join(outDir, 'package.json'),
-    `${JSON.stringify({ private: true, type: 'module' }, null, 2)}\n`,
-  );
+  await traceNodeModules([entry], {
+    outDir: '.output',
+    rootDir: this.cwd,
+    writePackageJson: true,
+  });
 
   return result;
 }

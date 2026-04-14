@@ -23,5 +23,12 @@ test('works', async ({}, testInfo) => {
 
   expect(
     new Set(await globby('**', { cwd: pathLib.join(cwd, '.output') })),
-  ).toEqual(new Set(['node_modules/foo/index.js', 'cli.mjs', 'package.json']));
+  ).toEqual(
+    new Set([
+      'node_modules/foo/index.js',
+      'node_modules/foo/package.json',
+      'cli.mjs',
+      'package.json',
+    ]),
+  );
 });
