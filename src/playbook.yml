@@ -1,0 +1,74 @@
+---
+- name: Production
+  hosts: servers
+  become: yes
+
+  vars:
+    # Base paths
+    app_name: >-
+      {{
+        (lookup('file', 'package.json') | from_json).name
+        | regex_replace('^.*/', '')
+      }}
+    deploy_to: "/var/www/{{ app_name }}"
+
+    # Local artifact built by GitHub Actions (tar.gz)
+    artifact_local_path: ./deploy.tgz
+
+  tasks:
+    - name: Prepare deploy folder layout and compute new release path
+      community.general.deploy_helper:
+        path: "{{ deploy_to }}"
+
+    - name: Upload artifact to server
+      ansible.builtin.copy:
+        src: "{{ artifact_local_path }}"
+        dest: "/tmp/{{ app_name }}-{{ deploy_helper.new_release }}.tgz"
+        mode: "0644"
+
+    - name: Ensure new release directory exists
+      ansible.builtin.file:
+        path: "{{ deploy_helper.new_release_path }}"
+        state: directory
+        mode: "0755"
+
+    - name: Extract artifact into new release path
+      ansible.builtin.unarchive:
+        src: "/tmp/{{ app_name }}-{{ deploy_helper.new_release }}.tgz"
+        dest: "{{ deploy_helper.new_release_path }}"
+        remote_src: true
+
+    # --- AUTO-LINK: link all direct children of shared/ into the release root ---
+    - name: Ensure shared directory exists
+      ansible.builtin.file:
+        path: "{{ deploy_helper.shared_path }}"
+        state: directory
+        mode: "0755"
+
+    - name: List all items in shared/ (including dotfiles)
+      ansible.builtin.find:
+        paths: "{{ deploy_helper.shared_path }}"
+        file_type: any
+        hidden: true
+        recurse: false
+      register: shared_items
+
+    - name: Symlink all shared items into the new release (same name)
+      ansible.builtin.file:
+        src: "{{ item.path }}"
+        dest: "{{ deploy_helper.new_release_path }}/{{ item.path | basename }}"
+        state: link
+        force: true
+      loop: "{{ shared_items.files }}"
+
+    - name: "Finalize: switch current -> new release (atomic)"
+      community.general.deploy_helper:
+        path: "{{ deploy_to }}"
+        release: "{{ deploy_helper.new_release }}"
+        state: finalize
+
+    - name: Cleanup old releases
+      community.general.deploy_helper:
+        path: "{{ deploy_to }}"
+        keep_releases: 5
+        state: clean
