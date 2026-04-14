@@ -18,9 +18,12 @@ const resolver = createRequire(import.meta.url);
 export default defineBaseConfig(function (this: Base) {
   const packageConfig = readPackageSync({ cwd: this.cwd });
   return {
-    editorIgnore: packageConfig.private
-      ? []
-      : ['ecosystem.json', 'playbook.yml', 'requirements.yml'],
+    allowedMatches: [
+      'src',
+      packageConfig.private
+        ? []
+        : ['ecosystem.json', 'playbook.yml', 'requirements.yml'],
+    ],
     gitignore: ['/.output'],
     isLockFileFixCommitType: true,
     ...(!packageConfig.private && {
@@ -30,6 +33,7 @@ export default defineBaseConfig(function (this: Base) {
           { publishCmd: 'ansible-playbook playbook.yml -i .inventory' },
         ],
       ],
+      editorIgnore: ['ecosystem.json', 'playbook.yml', 'requirements.yml'],
       preDeploySteps: [
         { name: 'Build project', run: 'pnpm build' },
         {
