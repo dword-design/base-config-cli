@@ -1,9 +1,9 @@
-import { copyFile, mkdir, writeFile } from 'node:fs/promises';
 import pathLib from 'node:path';
 
 import type { Base, PartialCommandOptions } from '@dword-design/base';
 import { nodeFileTrace } from '@vercel/nft';
 import { execaCommand } from 'execa';
+import fs from 'fs-extra';
 
 import resolveAliases from './resolve-aliases';
 
@@ -36,11 +36,10 @@ export default async function (
   for (const file of fileList) {
     const src = pathLib.resolve(this.cwd, file);
     const dest = pathLib.resolve(outDir, file);
-    await mkdir(pathLib.dirname(dest), { recursive: true });
-    await copyFile(src, dest);
+    await fs.copy(src, dest);
   }
 
-  await writeFile(
+  await fs.writeFile(
     pathLib.join(outDir, 'package.json'),
     `${JSON.stringify({ private: true, type: 'module' }, null, 2)}\n`,
   );
