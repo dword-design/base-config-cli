@@ -1,3 +1,10 @@
+## [4.1.2](https://github.com/dword-design/base-config-cli/compare/v4.1.1...v4.1.2) (2026-04-14)
+
+
+### Bug Fixes
+
+* foo ([0f83559](https://github.com/dword-design/base-config-cli/commit/0f835590833c8d1184c2c3ec14c0470093bb2fa2))
+
 ## [4.1.1](https://github.com/dword-design/base-config-cli/compare/v4.1.0...v4.1.1) (2026-04-14)
 
 
