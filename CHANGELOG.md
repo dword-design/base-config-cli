@@ -1,3 +1,10 @@
+# [4.1.0](https://github.com/dword-design/base-config-cli/compare/v4.0.0...v4.1.0) (2026-04-14)
+
+
+### Features
+
+* rolling releases ([#109](https://github.com/dword-design/base-config-cli/issues/109)) ([f3d7050](https://github.com/dword-design/base-config-cli/commit/f3d70506353783ca0c76d0a660c253dbc8056296))
+
 # [4.0.0](https://github.com/dword-design/base-config-cli/compare/v3.0.1...v4.0.0) (2026-01-03)
 
 
