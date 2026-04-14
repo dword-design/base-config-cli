@@ -1,3 +1,10 @@
+## [4.1.3](https://github.com/dword-design/base-config-cli/compare/v4.1.2...v4.1.3) (2026-04-14)
+
+
+### Bug Fixes
+
+* use nf3 ([7084f93](https://github.com/dword-design/base-config-cli/commit/7084f937b33ee8c00682bd1e8fda9ddbb30e82cd))
+
 ## [4.1.2](https://github.com/dword-design/base-config-cli/compare/v4.1.1...v4.1.2) (2026-04-14)
 
 
