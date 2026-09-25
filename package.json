@@ -38,7 +38,7 @@
     "execa": "^9.6.1",
     "fs-extra": "^11.3.4",
     "globby": "^16.2.0",
-    "hosted-git-info": "^9.0.2",
+    "hosted-git-info": "^10.0.0",
     "nf3": "^0.3.16",
     "output-files": "^4.0.0",
     "parse-git-config": "npm:@dword-design/parse-git-config@^0.0.1",
