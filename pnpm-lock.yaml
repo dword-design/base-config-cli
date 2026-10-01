@@ -36,8 +36,8 @@ importers:
         specifier: ^9.0.2
         version: 9.0.2
       nf3:
-        specifier: ^0.3.16
-        version: 0.3.16
+        specifier: ^0.4.0
+        version: 0.4.0
       output-files:
         specifier: ^4.0.0
         version: 4.0.0
@@ -3156,8 +3156,8 @@ packages:
   nerf-dart@1.0.0:
     resolution: {integrity: sha512-EZSPZB70jiVsivaBLYDCyntd5eH8NTSMOn3rB+HxwdmKThGELLdYv8qVIMWvZEFy9w8ZZpW9h9OB32l1rGtj7g==}
 
-  nf3@0.3.16:
-    resolution: {integrity: sha512-Gs0xRPpUm2nDkqbi40NJ9g7qDIcjcJzgExiydnq6LAyqhI2jfno8wG3NKTL+IiJsx799UHOb1CnSd4Wg4SG4Pw==}
+  nf3@0.4.0:
+    resolution: {integrity: sha512-L0FZsuKjdfIo6bwPWxSkLH/147YLHnnFFW58JfITvZsgkmS2eX7e3RuiUpoeH+9TQyDOz5LO1DkDeBiajbI2/w==}
 
   node-addon-api@7.1.1:
     resolution: {integrity: sha512-5m3bsyrjFWE1xf7nz7YXdN4udnVtXK6/Yfgn5qnahL6bCkf2yKt4k3nuTKAtT4r3IG8JNR2ncsIMdZuAzJjHQQ==}
@@ -7856,7 +7856,7 @@ snapshots:
 
   nerf-dart@1.0.0: {}
 
-  nf3@0.3.16: {}
+  nf3@0.4.0: {}
 
   node-addon-api@7.1.1:
     optional: true
