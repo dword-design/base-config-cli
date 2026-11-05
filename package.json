@@ -31,7 +31,7 @@
   },
   "dependencies": {
     "@babel/core": "^7.29.0",
-    "@dword-design/base": "^16.2.5",
+    "@dword-design/base": "^17.0.0",
     "@semantic-release/exec": "^7.1.0",
     "depcheck-package-name": "^5.0.0",
     "endent": "npm:@dword-design/endent@^1.4.7",
