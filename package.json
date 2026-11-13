@@ -39,7 +39,7 @@
     "fs-extra": "^11.3.4",
     "globby": "^16.2.0",
     "hosted-git-info": "^9.0.2",
-    "nf3": "^0.3.16",
+    "nf3": "^0.4.0",
     "output-files": "^4.0.0",
     "parse-git-config": "npm:@dword-design/parse-git-config@^0.0.1",
     "parse-packagejson-name": "^1.1.0",
